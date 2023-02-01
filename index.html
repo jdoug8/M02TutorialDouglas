@@ -14,6 +14,10 @@
       rel="stylesheet" 
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+    <link 
+      href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' 
+      rel='stylesheet' 
+    />
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -367,6 +371,59 @@
         </div>
       </section>
 
+      <!-- CONTACT & MAP-->
+      <section class="p-5">
+        <div class="container">
+          <div class="row g-4">
+
+            <!-- CONTACT -->
+            <div class="col-md">
+              <h2 class="text-center mb-4">
+                Contact Info
+              </h2>
+              <ul class="list-group list-group-flush lead">
+                <li class="list-group-item">
+                  <span class="fw-bold">
+                    Main Location:
+                  </span>
+                  50 Main St. Boston, MA
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-bold">
+                    Enrollment Phone:
+                  </span>
+                  (555) 555-5555
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-bold">
+                    Student Phone:
+                  </span>
+                  (333) 333-3333
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-bold">
+                    Enrollment Email:
+                  </span>
+                  enroll@frontendbc.test
+                </li>
+                <li class="list-group-item">
+                  <span class="fw-bold">
+                    Student Email:
+                  </span>
+                  student@frontendbc.test
+                </li>
+              </ul>
+            </div>
+
+            <!-- MAP -->
+            <div class="col-md">
+              <div id="map">
+              </div>
+            </div>
+          </row>
+        </div>
+      </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/emmet/2.3.6/emmet.cjs.js"></script>
 
     <script
@@ -374,6 +431,18 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script 
+      src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'>
+    </script>
+    <script>
+      mapboxgl.accessToken ='pk.eyJ1IjoiamRvdWdsYXM4IiwiYSI6ImNsZGw0Nnp4ajIyaWQzcG1wbG94azlhaHIifQ.0uZjg1uiLzlZbvfuDCLHTA';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      })
+    </script>
 
     <script src="script.js"></script>
   </body>
